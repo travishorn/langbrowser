@@ -1,7 +1,7 @@
 {
-  "name": "client",
-  "version": "0.0.0",
-  "description": "This is the front-end client for <project and its description>.",
+  "name": "langbrowser-client",
+  "version": "0.1.0",
+  "description": "This is the front-end client for Language Browser; a web app for browsing through programming languages and their basic information.",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/travishorn/project.git"
+    "url": "git+https://github.com/travishorn/langbrowser.git"
   },
   "author": "Travis Horn <travis@travishorn.com> (https://travishorn.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/travishorn/project/issues"
+    "url": "https://github.com/travishorn/langbrowser/issues"
   },
-  "homepage": "https://github.com/travishorn/project#readme",
+  "homepage": "https://github.com/travishorn/langbrowser#readme",
   "dependencies": {
     "axios": "^1.2.6",
     "vue": "^3.2.45",

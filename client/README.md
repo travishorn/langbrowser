@@ -1,19 +1,20 @@
 # client
 
-This is the front-end client for <project and its description>.
+This is the front-end client for Language Browser; a web app for browsing
+through programming languages and their basic information.
 
 ## Project Setup
 
 Clone the repository
 
 ```sh
-git clone https://github.com/travishorn/project
+git clone https://github.com/travishorn/langbrowser
 ```
 
 Change into the client directory
 
 ```sh
-cd project/client
+cd langbrowser/client
 ```
 
 Install dependencies

@@ -1,19 +1,20 @@
 # server
 
-This is the back-end server for <project and its description>.
+This is the back-end server for Language Browser; a web app for browsing through
+programming languages and their basic information.
 
 ## Project Setup
 
 Clone the repository
 
 ```sh
-git clone https://github.com/travishorn/project
+git clone https://github.com/travishorn/langbrowser
 ```
 
 Change into the server directory
 
 ```sh
-cd project/server
+cd langbrowser/server
 ```
 
 Install dependencies

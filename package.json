@@ -1,19 +1,19 @@
 {
-  "name": "project",
-  "version": "0.0.0",
-  "description": "<project description>",
+  "name": "langbrowser",
+  "version": "0.1.0",
+  "description": "A web app for browsing through programming languages and their basic information.",
   "private": true,
   "scripts": {
     "start": "npm run build --prefix ./client && npm run start --prefix ./server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/travishorn/project.git"
+    "url": "git+https://github.com/travishorn/langbrowser.git"
   },
   "author": "Travis Horn <travis@travishorn.com> (https://travishorn.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/travishorn/project/issues"
+    "url": "https://github.com/travishorn/langbrowser/issues"
   },
-  "homepage": "https://github.com/travishorn/project#readme"
+  "homepage": "https://github.com/travishorn/langbrowser#readme"
 }
