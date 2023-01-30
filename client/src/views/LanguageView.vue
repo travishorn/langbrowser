@@ -20,12 +20,12 @@ const language = (
     First appeared in {{ new Date(language.appeared).getUTCFullYear() }}.
   </p>
 
-  <div>
+  <div v-if="language.paradigms.length">
     <h3 class="font-bold">Paradigms</h3>
     <ParadigmTags :tags="language.paradigms" />
   </div>
 
-  <div>
+  <div v-if="language.originalPurposes.length">
     <h3 class="font-bold">Original purpose</h3>
     <PurposeTags :tags="language.originalPurposes" />
   </div>

@@ -29,7 +29,7 @@ const routes = async (fastify) => {
         .select(["l.name", "p.name as paradigm"])
         .from("languages as l")
         .leftJoin("languageParadigms as lp", "lp.languageName", "=", "l.name")
-        .join("paradigms as p", "p.name", "=", "lp.paradigmName")
+        .leftJoin("paradigms as p", "p.name", "=", "lp.paradigmName")
         .modify(function (qb) {
           if (request.query.paradigm) {
             qb.whereIn(
@@ -60,10 +60,14 @@ const routes = async (fastify) => {
       return dbResult.reduce((prev, curr) => {
         const langIndex = prev.findIndex((d) => d.name === curr.name);
 
-        if (langIndex === -1) {
-          prev.push({ name: curr.name, paradigms: [curr.paradigm] });
-        } else {
+        if (langIndex !== -1) {
           prev[langIndex].paradigms.push(curr.paradigm);
+        } else {
+          prev.push({ name: curr.name, paradigms: [] });
+
+          if (curr.paradigm) {
+            prev[prev.length - 1].paradigms.push(curr.paradigm)
+          }
         }
 
         return prev;

@@ -19,7 +19,7 @@ const languages = (await api.get("/language")).data;
     >
       <div class="font-medium">{{ language.name }}</div>
 
-      <ParadigmTags :tags="language.paradigms" />
+      <ParadigmTags v-if="language.paradigms.length" :tags="language.paradigms" />
     </RouterLink>
   </div>
 </template>
