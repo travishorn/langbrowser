@@ -13,9 +13,9 @@ const purpose = (
 <template>
   <h2 class="text-6xl">{{ purpose.name }}</h2>
 
-  <p>{{ purpose.description }}</p>
+  <p v-if="purpose.description">{{ purpose.description }}</p>
 
-  <div>
+  <div v-if="purpose.languages.length">
     <h3 class="font-bold">Languages</h3>
     <LanguageTags :tags="purpose.languages" />
   </div>

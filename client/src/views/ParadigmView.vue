@@ -13,9 +13,9 @@ const paradigm = (
 <template>
   <h2 class="text-6xl">{{ paradigm.name }}</h2>
 
-  <p>{{ paradigm.description }}</p>
+  <p v-if="paradigm.description">{{ paradigm.description }}</p>
 
-  <div>
+  <div v-if="paradigm.languages.length">
     <h3 class="font-bold">Languages</h3>
     <LanguageTags :tags="paradigm.languages" />
   </div>

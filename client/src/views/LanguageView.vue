@@ -14,7 +14,7 @@ const language = (
 <template>
   <h2 class="text-6xl">{{ language.name }}</h2>
 
-  <p>{{ language.description }}</p>
+  <p v-if="language.description">{{ language.description }}</p>
 
   <p v-if="language.appeared">
     First appeared in {{ new Date(language.appeared).getUTCFullYear() }}.
