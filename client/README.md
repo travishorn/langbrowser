@@ -1,4 +1,4 @@
-# client
+# Language Browser Client
 
 This is the front-end client for Language Browser; a web app for browsing
 through programming languages and their basic information.

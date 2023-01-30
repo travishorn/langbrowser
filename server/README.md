@@ -1,4 +1,4 @@
-# server
+# Language Browser Server
 
 This is the back-end server for Language Browser; a web app for browsing through
 programming languages and their basic information.
