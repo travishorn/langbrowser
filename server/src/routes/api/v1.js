@@ -6,6 +6,12 @@ import { db } from "../../db.js";
  * @param {Object} options plugin options, refer to https://www.fastify.io/docs/latest/Reference/Plugins/#plugin-options
  */
 const routes = async (fastify) => {
+  fastify.get("/", {
+    handler: async () => {
+      return { mode: process.env.NODE_ENV };
+    },
+  });
+
   fastify.get("/language", {
     schema: {
       query: {
@@ -66,7 +72,7 @@ const routes = async (fastify) => {
           prev.push({ name: curr.name, paradigms: [] });
 
           if (curr.paradigm) {
-            prev[prev.length - 1].paradigms.push(curr.paradigm)
+            prev[prev.length - 1].paradigms.push(curr.paradigm);
           }
         }
 
@@ -92,20 +98,68 @@ const routes = async (fastify) => {
           "p.name"
         )
         .join("languages as l", "l.name", "=", "lop.languageName")
-        .where({ "l.name": request.params.name });
+        .where({ "l.name": request.params.name })
+        .orderBy(["p.name"]);
 
       const paradigms = await db
         .select(["p.name"])
         .from("paradigms as p")
         .join("languageParadigms as lp", "lp.paradigmName", "=", "p.name")
         .join("languages as l", "l.name", "=", "lp.languageName")
-        .where({ "l.name": request.params.name });
+        .where({ "l.name": request.params.name })
+        .orderBy(["p.name"]);
 
       return {
         ...language,
         originalPurposes: originalPurposes.map((p) => p.name),
         paradigms: paradigms.map((p) => p.name),
       };
+    },
+  });
+
+  fastify.get("/purpose", {
+    handler: async () => {
+      return await db
+        .select(["p.name", "p.description"])
+        .from("purposes as p")
+        .orderBy(["p.name"]);
+    },
+  });
+
+  fastify.get("/purpose/:name", {
+    handler: async (request) => {
+      const purpose = await db
+        .first(["p.name", "p.description"])
+        .from("purposes as p")
+        .where({ name: request.params.name })
+        .orderBy(["p.name"]);
+
+      const languages = await db
+        .select(["l.name"])
+        .from("languages as l")
+        .join(
+          "languageOriginalPurposes as lop",
+          "lop.languageName",
+          "=",
+          "l.name"
+        )
+        .join("purposes as p", "p.name", "=", "lop.purposeName")
+        .where({ "p.name": request.params.name })
+        .orderBy(["l.name"]);
+
+      return {
+        ...purpose,
+        languages: languages.map((l) => l.name),
+      };
+    },
+  });
+
+  fastify.get("/paradigm", {
+    handler: async () => {
+      return await db
+        .select(["p.name", "p.description"])
+        .from("paradigms as p")
+        .orderBy(["p.name"]);
     },
   });
 
@@ -121,36 +175,11 @@ const routes = async (fastify) => {
         .from("languages as l")
         .join("languageParadigms as lp", "lp.languageName", "=", "l.name")
         .join("paradigms as p", "p.name", "=", "lp.paradigmName")
-        .where({ "p.name": request.params.name });
+        .where({ "p.name": request.params.name })
+        .orderBy(["l.name"]);
 
       return {
         ...paradigm,
-        languages: languages.map((l) => l.name),
-      };
-    },
-  });
-
-  fastify.get("/purpose/:name", {
-    handler: async (request) => {
-      const purpose = await db
-        .first(["p.name", "p.description"])
-        .from("purposes as p")
-        .where({ name: request.params.name });
-
-      const languages = await db
-        .select(["l.name"])
-        .from("languages as l")
-        .join(
-          "languageOriginalPurposes as lop",
-          "lop.languageName",
-          "=",
-          "l.name"
-        )
-        .join("purposes as p", "p.name", "=", "lop.purposeName")
-        .where({ "p.name": request.params.name });
-
-      return {
-        ...purpose,
         languages: languages.map((l) => l.name),
       };
     },

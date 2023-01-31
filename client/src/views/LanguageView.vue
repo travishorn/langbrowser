@@ -2,7 +2,10 @@
 import { useRoute } from "vue-router";
 import ParadigmTags from "@/components/ParadigmTags.vue";
 import PurposeTags from "@/components/PurposeTags.vue";
+import LanguageEditor from "@/components/LanguageEditor.vue";
 import { api } from "@/api.js";
+
+const developmentMode = !import.meta.env.PROD;
 
 const route = useRoute();
 
@@ -29,4 +32,6 @@ const language = (
     <h3 class="font-bold">Original purpose</h3>
     <PurposeTags :tags="language.originalPurposes" />
   </div>
+
+  <LanguageEditor v-if="developmentMode" :name="language.name" class="mt-44" />
 </template>

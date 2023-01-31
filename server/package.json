@@ -4,8 +4,8 @@
   "description": "This is the back-end server for Language Browser; a web app for browsing through programming languages and their basic information.",
   "private": true,
   "scripts": {
-    "dev": "nodemon ./src/server.js",
-    "start": "nodemon ./src/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon ./src/server.js",
+    "start": "cross-env NODE_ENV=production nodemon ./src/server.js",
     "lint": "eslint . --ext .js,.cjs --fix --ignore-path ../.gitignore",
     "migrate": "knex migrate:latest",
     "seed": "knex seed:run"
@@ -28,6 +28,7 @@
     "@fastify/cors": "^8.2.0",
     "@fastify/static": "^6.7.0",
     "better-sqlite3": "^8.0.1",
+    "cross-env": "^7.0.3",
     "fastify": "^4.12.0",
     "knex": "^2.4.2"
   },
