@@ -32,7 +32,7 @@ const routes = async (fastify) => {
        * ]
        */
       const dbResult = await db
-        .select(["l.name", "p.name as paradigm"])
+        .select(["l.name", "l.appeared", "p.name as paradigm"])
         .from("languages as l")
         .leftJoin("languageParadigms as lp", "lp.languageName", "=", "l.name")
         .leftJoin("paradigms as p", "p.name", "=", "lp.paradigmName")
@@ -69,7 +69,11 @@ const routes = async (fastify) => {
         if (langIndex !== -1) {
           prev[langIndex].paradigms.push(curr.paradigm);
         } else {
-          prev.push({ name: curr.name, paradigms: [] });
+          prev.push({
+            name: curr.name,
+            appeared: curr.appeared,
+            paradigms: [],
+          });
 
           if (curr.paradigm) {
             prev[prev.length - 1].paradigms.push(curr.paradigm);

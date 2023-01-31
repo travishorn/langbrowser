@@ -17,9 +17,17 @@ const languages = (await api.get("/language")).data;
       :key="language.name"
       :to="`/language/${encodeURIComponent(language.name)}`"
     >
-      <div class="font-medium">{{ language.name }}</div>
+      <div class="flex justify-between">
+        <div class="font-medium">{{ language.name }}</div>
+        <div v-if="language.appeared" class="text-gray-500 text-xs">
+          {{ new Date(language.appeared).getUTCFullYear() }}
+        </div>
+      </div>
 
-      <ParadigmTags v-if="language.paradigms.length" :tags="language.paradigms" />
+      <ParadigmTags
+        v-if="language.paradigms.length"
+        :tags="language.paradigms"
+      />
     </RouterLink>
   </div>
 </template>
