@@ -30,7 +30,7 @@ export const seed = async (knex) => {
     {
       name: "Ada",
       description:
-        "Ada is a structured, statically typed, imperative, and object-oriented high-level programming language, extended from Pascal and other languages. It has built-in language support for design by contract (DbC), extremely strong typing, explicit concurrency, tasks, synchronous message passing, protected objects, and non-determinism. Ada improves code safety and maintainability by using the compiler to find errors in favor of runtime errors. Ada is an international technical standard, jointly defined by the International Organization for Standardization (ISO), and the International Electrotechnical Commission (IEC). As of 2020, the standard, called Ada 2012 informally, is ISO/IEC 8652:2012.",
+        "Ada is a structured, statically typed, imperative, and object-oriented high-level programming language, extended from Pascal and other languages. It has built-in language support for design by contract (DbC), extremely strong typing, explicit concurrency, tasks, synchronous message passing, protected objects, and non-determinism. Ada improves code safety and maintainability by using the compiler to find errors in favor of runtime errors.",
       appeared: "1980-01-01",
     },
     {
@@ -55,7 +55,7 @@ export const seed = async (knex) => {
     {
       name: "AWK",
       description:
-        "AWK is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. Like sed and grep, it is a filter, and is a standard feature of most Unix-like operating systems. The AWK language is a data-driven scripting language consisting of a set of actions to be taken against streams of textual data - either run directly on files or used as part of a pipeline - for purposes of extracting or transforming text, such as producing formatted reports. The language extensively uses the string datatype, associative arrays (that is, arrays indexed by key strings), and regular expressions. While AWK has a limited intended application domain and was especially designed to support one-liner programs, the language is Turing-complete, and even the early Bell Labs users of AWK often wrote well-structured large AWK programs. AWK was created at Bell Labs in the 1970s, and its name is derived from the surnames of its authors: Alfred Aho, Peter Weinberger, and Brian Kernighan. The acronym is pronounced the same as the bird auk, which is on the cover of The AWK Programming Language. When written in all lowercase letters, as awk, it refers to the Unix or Plan 9 program that runs scripts written in the AWK programming language.",
+        "AWK is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. Like sed and grep, it is a filter, and is a standard feature of most Unix-like operating systems. The AWK language is a data-driven scripting language consisting of a set of actions to be taken against streams of textual data - either run directly on files or used as part of a pipeline - for purposes of extracting or transforming text, such as producing formatted reports.",
       appeared: "1977-01-01",
     },
     {
@@ -67,7 +67,7 @@ export const seed = async (knex) => {
     {
       name: "Bash",
       description:
-        "Bash is a Unix shell and command language written by Brian Fox for the GNU Project as a free software replacement for the Bourne shell. First released in 1989, it has been used as the default login shell for most Linux distributions. Bash was one of the first programs Linus Torvalds ported to Linux, alongside GCC. A version is also available for Windows 10 and Windows 11 via the Windows Subsystem for Linux. It is also the default user shell in Solaris 11. Bash was also the default shell in versions of Apple macOS from 10.3 (originally, the default shell was tcsh) to the 2019 release of macOS Catalina, which changed the default shell to zsh, although Bash remains available as an alternative shell.",
+        "Bash is a Unix shell and command language written by Brian Fox for the GNU Project as a free software replacement for the Bourne shell. First released in 1989, it has been used as the default login shell for most Linux distributions. Bash was one of the first programs Linus Torvalds ported to Linux, alongside GCC. A version is also available for Windows 10 and Windows 11 via the Windows Subsystem for Linux. It is also the default user shell in Solaris 11.",
       appeared: "1989-01-01",
     },
     { name: "BASIC", appeared: "1964-05-01" },
@@ -84,13 +84,13 @@ export const seed = async (knex) => {
     {
       name: "C#",
       description:
-        "C# is a general-purpose high-level programming language supporting multiple paradigms. C# encompasses static typing, strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented (class-based), and component-oriented programming disciplines.The C# programming language was designed by Anders Hejlsberg from Microsoft in 2000 and was later approved as an international standard by Ecma (ECMA-334) in 2002 and ISO/IEC (ISO/IEC 23270) in 2003. Microsoft introduced C# along with .NET Framework and Visual Studio, both of which were closed-source. At the time, Microsoft had no open-source products. Four years later, in 2004, a free and open-source project called Mono began, providing a cross-platform compiler and runtime environment for the C# programming language. A decade later, Microsoft released Visual Studio Code (code editor), Roslyn (compiler), and the unified .NET platform (software framework), all of which support C# and are free, open-source, and cross-platform. Mono also joined Microsoft but was not merged into .NET.",
+        "C# is a general-purpose high-level programming language supporting multiple paradigms. C# encompasses static typing, strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented (class-based), and component-oriented programming disciplines.The C# programming language was designed by Anders Hejlsberg from Microsoft in 2000 and was later approved as an international standard by Ecma (ECMA-334) in 2002 and ISO/IEC (ISO/IEC 23270) in 2003.",
       appeared: "2000-01-01",
     },
     {
       name: "C++",
       description:
-        'C++ is a high-level general-purpose programming language created by Danish computer scientist Bjarne Stroustrup as an extension of the C programming language, or "C with Classes". The language has expanded significantly over time, and modern C++ now has object-oriented, generic, and functional features in addition to facilities for low-level memory manipulation. It is almost always implemented as a compiled language, and many vendors provide C++ compilers, including the Free Software Foundation, LLVM, Microsoft, Intel, Embarcadero, Oracle, and IBM, so it is available on many platforms.',
+        'C++ is a high-level general-purpose programming language created by Danish computer scientist Bjarne Stroustrup as an extension of the C programming language, or "C with Classes". The language has expanded significantly over time, and modern C++ now has object-oriented, generic, and functional features in addition to facilities for low-level memory manipulation.',
       appeared: "1985-01-01",
     },
     { name: "Clarion", appeared: "1986-04-01" },
@@ -98,45 +98,130 @@ export const seed = async (knex) => {
     {
       name: "Clojure",
       description:
-        "Clojure is a dynamic and functional dialect of the Lisp programming language on the Java platform. Like other Lisp dialects, Clojure treats code as data and has a Lisp macro system. The current development process is community-driven, overseen by Rich Hickey as its benevolent dictator for life (BDFL). Clojure advocates immutability and immutable data structures and encourages programmers to be explicit about managing identity and its states. This focus on programming with immutable values and explicit progression-of-time constructs is intended to facilitate developing more robust, especially concurrent, programs that are simple and fast. While its type system is entirely dynamic, recent efforts have also sought the implementation of a dependent type system.",
+        "Clojure is a dynamic and functional dialect of the Lisp programming language on the Java platform. Like other Lisp dialects, Clojure treats code as data and has a Lisp macro system. The current development process is community-driven, overseen by Rich Hickey as its benevolent dictator for life (BDFL). Clojure advocates immutability and immutable data structures and encourages programmers to be explicit about managing identity and its states.",
       appeared: "2007-01-01",
     },
     { name: "CLU", appeared: "1975-01-01" },
-    { name: "COBOL", appeared: "1959-01-01" },
+    {
+      name: "COBOL",
+      description:
+        "COBOL (common business-oriented language) is a compiled English-like computer programming language designed for business use. It is an imperative, procedural and, since 2002, object-oriented language. COBOL is primarily used in business, finance, and administrative systems for companies and governments. COBOL is still widely used in applications deployed on mainframe computers, such as large-scale batch and transaction processing jobs.",
+      appeared: "1959-01-01",
+    },
     { name: "Cobra", appeared: "2006-01-01" },
-    { name: "CoffeeScript", appeared: "2009-12-13" },
-    { name: "ColdFusion (CFML)", appeared: "1995-01-01" },
+    {
+      name: "CoffeeScript",
+      description:
+        "CoffeeScript is a programming language that compiles to JavaScript. It adds syntactic sugar inspired by Ruby, Python, and Haskell in an effort to enhance JavaScript's brevity and readability. Specific additional features include list comprehension and destructuring assignment. CoffeeScript support is included in Ruby on Rails version 3.1 and Play Framework. In 2011, Brendan Eich referenced CoffeeScript as an influence on his thoughts about the future of JavaScript.",
+      appeared: "2009-12-13",
+    },
+    {
+      name: "ColdFusion (CFML)",
+      description:
+        "ColdFusion Markup Language, more commonly known as CFML, is a scripting language for web development that runs on the JVM, the .NET framework, and Google App Engine. Multiple commercial and open source implementations of CFML engines are available, including Adobe ColdFusion, Lucee, New Atlanta BlueDragon (who offer both a Java-based and a .NET-based version), Railo, and Open BlueDragon as well as other CFML server engines.",
+      appeared: "1995-01-01",
+    },
     { name: "COMAL 80", appeared: "1980-01-01" },
-    { name: "Common Lisp", appeared: "1984-01-01" },
-    { name: "Crystal", appeared: "2014-06-19" },
+    {
+      name: "Common Lisp",
+      description:
+        "Common Lisp (CL) is a dialect of the Lisp programming language, published in ANSI standard document ANSI INCITS 226-1994 (S20018) (formerly X3.226-1994 (R1999)). The Common Lisp HyperSpec, a hyperlinked HTML version, has been derived from the ANSI Common Lisp standard. The Common Lisp language was developed as a standardized and improved successor of Maclisp. By the early 1980s several groups were already at work on diverse successors to MacLisp: Lisp Machine Lisp (aka ZetaLisp), Spice Lisp, NIL and S-1 Lisp.",
+      appeared: "1984-01-01",
+    },
+    {
+      name: "Crystal",
+      description:
+        "Crystal is a general-purpose, object-oriented programming language, designed and developed by Ary Borenszweig, Juan Wajnerman, Brian Cardiff and more than 300 contributors. With syntax inspired by the language Ruby, it is a compiled language with static type-checking, but specifying the types of variables or method arguments is generally unneeded. Types are resolved by an advanced global type inference algorithm. Crystal is currently in active development. It is released as free and open-source software under the Apache License version 2.0.",
+      appeared: "2014-06-19",
+    },
     { name: "Curry" },
     { name: "Cython", appeared: "2007-06-28" },
-    { name: "D", appeared: "2001-12-08" },
-    { name: "Dart", appeared: "2011-10-10" },
-    { name: "Delphi", appeared: "1995-01-01" },
+    {
+      name: "D",
+      description:
+        "D, also known as dlang, is a multi-paradigm system programming language created by Walter Bright at Digital Mars and released in 2001. Andrei Alexandrescu joined the design and development effort in 2007. Though it originated as a re-engineering of C++, D is a profoundly different language —features of D can be considered streamlined and expanded-upon ideas from C++, however D also draws inspiration from other high-level programming languages, notably Java, Python, Ruby, C#, and Eiffel.",
+      appeared: "2001-12-08",
+    },
+    {
+      name: "Dart",
+      description:
+        "Dart is a programming language designed for client development, such as for the web and mobile apps. It is developed by Google and can also be used to build server and desktop applications. It is an object-oriented, class-based, garbage-collected language with C-style syntax. It can compile to either machine code or JavaScript, and supports interfaces, mixins, abstract classes, reified generics and type inference.",
+      appeared: "2011-10-10",
+    },
+    {
+      name: "Delphi",
+      description:
+        "Delphi is a general-purpose programming language and a software product that uses the Delphi dialect of the Object Pascal programming language and provides an integrated development environment (IDE) for rapid application development of desktop, mobile, web, and console software, currently developed and maintained by Embarcadero Technologies. Delphi's compilers generate native code for Microsoft Windows, macOS, iOS, Android and Linux (x64).",
+      appeared: "1995-01-01",
+    },
     { name: "Dylan", appeared: "1992-01-01" },
     { name: "Eiffel", appeared: "1986-01-01" },
     { name: "ELAN", appeared: "1974-01-01" },
-    { name: "Elixir", appeared: "2012-01-01" },
-    { name: "Elm", appeared: "2012-03-30" },
-    { name: "Emacs Lisp", appeared: "1985-01-01" },
-    { name: "Erlang", appeared: "1986-01-01" },
+    {
+      name: "Elixir",
+      description:
+        "Elixir is a functional, concurrent, high-level general-purpose programming language that runs on the BEAM virtual machine, which is also used to implement the Erlang programming language. Elixir builds on top of Erlang and shares the same abstractions for building distributed, fault-tolerant applications. Elixir also provides productive tooling and an extensible design. The latter is supported by compile-time metaprogramming with macros and polymorphism via protocols.",
+      appeared: "2012-01-01",
+    },
+    {
+      name: "Elm",
+      description:
+        'Elm is a domain-specific programming language for declaratively creating web browser-based graphical user interfaces. Elm is purely functional, and is developed with emphasis on usability, performance, and robustness. It advertises "no runtime exceptions in practice", made possible by the Elm compiler\'s static type checking.',
+      appeared: "2012-03-30",
+    },
+    {
+      name: "Emacs Lisp",
+      description:
+        "Emacs Lisp is a dialect of the Lisp programming language used as a scripting language by Emacs (a text editor family most commonly associated with GNU Emacs and XEmacs). It is used for implementing most of the editing functionality built into Emacs, the remainder being written in C, as is the Lisp interpreter. Emacs Lisp is also termed Elisp, although there is also an older, unrelated Lisp dialect with that name. Users of Emacs commonly write Emacs Lisp code to customize and extend Emacs.",
+      appeared: "1985-01-01",
+    },
+    {
+      name: "Erlang",
+      description:
+        "Erlang is a general-purpose, concurrent, functional high-level programming language, and a garbage-collected runtime system. The term Erlang is used interchangeably with Erlang/OTP, or Open Telecom Platform (OTP), which consists of the Erlang runtime system, several ready-to-use components (OTP) mainly written in Erlang, and a set of design principles for Erlang programs. The Erlang programming language has immutable data, pattern matching, and functional programming.",
+      appeared: "1986-01-01",
+    },
     { name: "Euphoria", appeared: "1993-01-01" },
-    { name: "F#", appeared: "2005-01-01" },
+    {
+      name: "F#",
+      description:
+        "F# is a functional-first, general-purpose, strongly typed, multi-paradigm programming language that encompasses functional, imperative, and object-oriented programming methods. It is most often used as a cross-platform Common Language Infrastructure (CLI) language on .NET, but can also generate JavaScript and graphics processing unit (GPU) code. F# is developed by the F# Software Foundation, Microsoft and open contributors. An open source, cross-platform compiler for F# is available from the F# Software Foundation.",
+      appeared: "2005-01-01",
+    },
     { name: "Factor", appeared: "2003-01-01" },
     { name: "Forth", appeared: "1970-01-01" },
-    { name: "Fortran", appeared: "1957-01-01" },
+    {
+      name: "Fortran",
+      description:
+        "Fortran is a general-purpose, compiled imperative programming language that is especially suited to numeric computation and scientific computing. Fortran was originally developed by IBM in the 1950s for scientific and engineering applications, and subsequently came to dominate scientific computing. It has been in use for over six decades in computationally intensive areas such as numerical weather prediction, finite element analysis, computational fluid dynamics, geophysics, computational physics, crystallography and computational chemistry.",
+      appeared: "1957-01-01",
+    },
     { name: "FP", appeared: "1977-01-01" },
     { name: "FreeBASIC", appeared: "2004-01-01" },
     { name: "Gambas", appeared: "1999-01-01" },
     { name: "Game Maker Language", appeared: "1999-11-15" },
     { name: "GLBasic", appeared: "2000-01-01" },
-    { name: "Go", appeared: "2009-11-10" },
+    {
+      name: "Go",
+      description:
+        "Go is a statically typed, compiled high-level programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson. It is syntactically similar to C, but with memory safety, garbage collection, structural typing, and CSP-style concurrency. It is often referred to as Golang because of its former domain name, golang.org, but its proper name is Go.",
+      appeared: "2009-11-10",
+    },
     { name: "Gosu", appeared: "2010-01-01" },
     { name: "GraphTalk" },
-    { name: "Groovy", appeared: "2003-01-01" },
+    {
+      name: "Groovy",
+      description:
+        "Apache Groovy is a Java-syntax-compatible object-oriented programming language for the Java platform. It is both a static and dynamic language with features similar to those of Python, Ruby, and Smalltalk. It can be used as both a programming language and a scripting language for the Java Platform, is compiled to Java virtual machine (JVM) bytecode, and interoperates seamlessly with other Java code and libraries. Groovy uses a curly-bracket syntax similar to Java's. Groovy supports closures, multiline strings, and expressions embedded in strings.",
+      appeared: "2003-01-01",
+    },
     { name: "Harbour", appeared: "1999-01-01" },
-    { name: "Haskell", appeared: "1990-01-01" },
+    {
+      name: "Haskell",
+      description:
+        "Haskell is a general-purpose, statically-typed, purely functional programming language with type inference and lazy evaluation. Designed for teaching, research and industrial applications, Haskell has pioneered a number of programming language features such as type classes, which enable type-safe operator overloading, and monadic IO. Haskell's main implementation is the Glasgow Haskell Compiler (GHC). It is named after logician Haskell Curry.",
+      appeared: "1990-01-01",
+    },
     { name: "Haxe", appeared: "2005-11-14" },
     { name: "HyperNext" },
     { name: "HyperTalk", appeared: "1987-01-01" },
@@ -145,82 +230,247 @@ export const seed = async (knex) => {
     { name: "ISLISP", appeared: "1990-01-01" },
     { name: "J", appeared: "1990-01-01" },
     { name: "JADE", appeared: "1996-01-01" },
-    { name: "Java", appeared: "1995-05-23" },
-    { name: "JavaScript", appeared: "1995-12-04" },
+    {
+      name: "Java",
+      description:
+        "Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let programmers write once, run anywhere (WORA), meaning that compiled Java code can run on all platforms that support Java without the need to recompile. Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture.",
+      appeared: "1995-05-23",
+    },
+    {
+      name: "JavaScript",
+      description:
+        "JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices. JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions.",
+      appeared: "1995-12-04",
+    },
     { name: "Joy", appeared: "2001-01-01" },
-    { name: "jq", appeared: "2012-08-21" },
-    { name: "Julia", appeared: "2012-01-01" },
+    {
+      name: "jq",
+      description:
+        'jq is a very high-level lexically-scoped functional programming language in which every JSON value is a constant. jq supports backtracking and managing indefinitely long streams of JSON data. It is related to the Icon and Haskell programming languages. The language supports a namespace-based module system, and has some support for closures. In particular, functions and functional expressions can be used as parameters of other functions. The original implementation of jq was in C; gojq is a "Pure Go" implementation.',
+      appeared: "2012-08-21",
+    },
+    {
+      name: "Julia",
+      description:
+        'Julia is a high-level, dynamic programming language. Its features are well suited for numerical analysis and computational science. Distinctive aspects of Julia\'s design include a type system with parametric polymorphism in a dynamic programming language; with multiple dispatch as its core programming paradigm. Julia supports concurrent, (composable) parallel and distributed computing (with or without using MPI or the built-in corresponding[clarification needed] to "OpenMP-style" threads), and direct calling of C and Fortran libraries without glue code.',
+      appeared: "2012-01-01",
+    },
     { name: "K", appeared: "1993-01-01" },
-    { name: "Kotlin", appeared: "2011-07-22" },
+    {
+      name: "Kotlin",
+      description:
+        "Kotlin is a cross-platform, statically typed, general-purpose high-level programming language with type inference. Kotlin is designed to interoperate fully with Java, and the JVM version of Kotlin's standard library depends on the Java Class Library,[failed verification] but type inference allows its syntax to be more concise. Kotlin mainly targets the JVM, but also compiles to JavaScript (e.g., for frontend web applications using React) or native code via LLVM (e.g., for native iOS apps sharing business logic with Android apps).",
+      appeared: "2011-07-22",
+    },
     { name: "Ksh", appeared: "1983-01-01" },
     { name: "LabVIEW (G)", appeared: "1986-01-01" },
-    { name: "LFE", appeared: "2008-01-01" },
+    {
+      name: "LFE",
+      description:
+        "Lisp Flavored Erlang (LFE) is a functional, concurrent, garbage collected, general-purpose programming language and Lisp dialect built on Core Erlang and the Erlang virtual machine (BEAM). LFE builds on Erlang to provide a Lisp syntax for writing distributed, fault-tolerant, soft real-time, non-stop applications. LFE also extends Erlang to support metaprogramming with Lisp macros and an improved developer experience with a feature-rich read-eval-print loop (REPL). LFE is actively supported on all recent releases of Erlang.",
+      appeared: "2008-01-01",
+    },
     { name: "Linden Scripting Language (LSL)" },
     { name: "Lisp", appeared: "1960-01-01" },
     { name: "LiveCode", appeared: "2001-07-11" },
     { name: "Logtalk", appeared: "1998-01-01" },
-    { name: "Lua", appeared: "1993-01-01" },
+    {
+      name: "Lua",
+      description:
+        "Lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications. Lua is cross-platform, since the interpreter of compiled bytecode is written in ANSI C, and Lua has a relatively simple C API to embed it into applications. Lua originated in 1993 as a language for extending software applications to meet the increasing demand for customization at the time.",
+      appeared: "1993-01-01",
+    },
     { name: "Maple", appeared: "1982-01-01" },
     { name: "Mathematica", appeared: "1988-06-23" },
     { name: "MATLAB", appeared: "1979-02-01" },
     { name: "Modula-2", appeared: "1978-01-01" },
     { name: "Modula-3", appeared: "1988-01-01" },
     { name: "MUMPS (M)", appeared: "1966-01-01" },
-    { name: "Nim", appeared: "2008-01-01" },
+    {
+      name: "Nim",
+      description:
+        'Nim is a general-purpose, multi-paradigm, statically typed, compiled systems programming language, designed and developed by a team around Andreas Rumpf. Nim is designed to be "efficient, expressive, and elegant", supporting metaprogramming, functional, message passing, procedural, and object-oriented programming styles by providing several features such as compile time code generation, algebraic data types, a foreign function interface (FFI) with C, C++, Objective-C, and JavaScript, and supporting compiling to those same languages as intermediate representations.',
+      appeared: "2008-01-01",
+    },
     { name: "Oberon", appeared: "1987-01-01" },
     { name: "Object Pascal", appeared: "1986-01-01" },
-    { name: "Objective-C", appeared: "1984-01-01" },
-    { name: "OCaml", appeared: "1996-01-01" },
+    {
+      name: "Objective-C",
+      description:
+        "Objective-C is a general-purpose, object-oriented programming language that adds Smalltalk-style messaging to the C programming language. Originally developed by Brad Cox and Tom Love in the early 1980s, it was selected by NeXT for its NeXTSTEP operating system. Due to Apple macOS’s direct lineage from NeXTSTEP, Objective-C was the standard programming language used, supported, and promoted by Apple for developing macOS and iOS applications (via their respective APIs, Cocoa and Cocoa Touch) until the introduction of the Swift programming language in 2014.",
+      appeared: "1984-01-01",
+    },
+    {
+      name: "OCaml",
+      description:
+        "OCaml is a general-purpose, multi-paradigm programming language which extends the Caml dialect of ML with object-oriented features. OCaml was created in 1996 by Xavier Leroy, Jérôme Vouillon, Damien Doligez, Didier Rémy, Ascánder Suárez, and others. The OCaml toolchain includes an interactive top-level interpreter, a bytecode compiler, an optimizing native code compiler, a reversible debugger, and a package manager (OPAM). OCaml was initially developed in the context of automated theorem proving.",
+      appeared: "1996-01-01",
+    },
     { name: "occam", appeared: "1983-01-01" },
     { name: "Opa", appeared: "2011-01-01" },
     { name: "OpenLisp", appeared: "1988-04-01" },
     { name: "Oxygene", appeared: "2005-01-01" },
     { name: "Oz-Mozart", appeared: "1991-01-01" },
     { name: "Pascal", appeared: "1970-01-01" },
-    { name: "Perl", appeared: "1987-12-18" },
-    { name: "Pharo", appeared: "2008-01-01" },
-    { name: "PHP", appeared: "1995-06-08" },
+    {
+      name: "Perl",
+      description:
+        'Perl is a family of two high-level, general-purpose, interpreted, dynamic programming languages. "Perl" refers to Perl 5, but from 2000 to 2019 it also referred to its redesigned "sister language", Perl 6, before the latter\'s name was officially changed to Raku in October 2019. Though Perl is not officially an acronym, there are various backronyms in use, including "Practical Extraction and Reporting Language". Perl was developed by Larry Wall in 1987 as a general-purpose Unix scripting language to make report processing easier.',
+      appeared: "1987-12-18",
+    },
+    {
+      name: "Pharo",
+      description:
+        "Pharo is an open source, cross-platform implementation of the classic Smalltalk-80 programming language and runtime. It's based on the OpenSmalltalk virtual machine called Cog (VM), which evaluates a dynamic, reflective, and object-oriented programming language with a syntax closely resembling Smalltalk-80. Pharo is shipped with a source code compiled into a system image that contains all software necessary to run Pharo system.",
+      appeared: "2008-01-01",
+    },
+    {
+      name: "PHP",
+      description:
+        "PHP is a general-purpose scripting language geared toward web development. It was originally created by Danish-Canadian programmer Rasmus Lerdorf in 1993 and released in 1995. The PHP reference implementation is now produced by The PHP Group. PHP was originally an abbreviation of Personal Home Page, but it now stands for the recursive initialism PHP: Hypertext Preprocessor. PHP code is usually processed on a web server by a PHP interpreter implemented as a module, a daemon or as a Common Gateway Interface (CGI) executable.",
+      appeared: "1995-06-08",
+    },
     { name: "PL/I", appeared: "1964-01-01" },
-    { name: "PL/SQL", appeared: "1995-01-01" },
+    {
+      name: "PL/SQL",
+      description:
+        "PL/SQL (Procedural Language for SQL) is Oracle Corporation's procedural extension for SQL and the Oracle relational database. PL/SQL is available in Oracle Database (since version 6 - stored PL/SQL procedures/functions/packages/triggers since version 7), Times Ten in-memory database (since version 11.2.1), and IBM Db2 (since version 9.7). Oracle Corporation usually extends PL/SQL functionality with each successive release of the Oracle Database. PL/SQL includes procedural language elements such as conditions and loops.",
+      appeared: "1995-01-01",
+    },
     { name: "Plus", appeared: "1976-01-01" },
     { name: "PostScript", appeared: "1982-01-01" },
     { name: "PowerShell", appeared: "2006-11-14" },
-    { name: "Prolog", appeared: "1972-01-01" },
+    {
+      name: "Prolog",
+      description:
+        "Prolog is a logic programming language associated with artificial intelligence and computational linguistics. Prolog has its roots in first-order logic, a formal logic, and unlike many other programming languages, Prolog is intended primarily as a declarative programming language: the program logic is expressed in terms of relations, represented as facts and rules. A computation is initiated by running a query over these relations.",
+      appeared: "1972-01-01",
+    },
     { name: "PureBasic", appeared: "1998-01-01" },
-    { name: "PureScript", appeared: "2013-01-01" },
-    { name: "Python", appeared: "1991-02-20" },
-    { name: "R", appeared: "1993-08-01" },
-    { name: "Racket", appeared: "1995-01-01" },
-    { name: "Raku", appeared: "2015-12-25" },
+    {
+      name: "PureScript",
+      description:
+        "PureScript is a strongly-typed, purely-functional programming language that transpiles to JavaScript, C++11, Go. It can be used to develop web applications, server side apps, and also desktop applications with use of Electron or via C++11 and Go compilers with suitable libraries. Its syntax is mostly comparable to that of Haskell. In addition, it introduces row polymorphism and extensible records. Also, contrary to Haskell, PureScript adheres to a strict evaluation strategy.",
+      appeared: "2013-01-01",
+    },
+    {
+      name: "Python",
+      description:
+        'Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.',
+      appeared: "1991-02-20",
+    },
+    {
+      name: "R",
+      description:
+        "R is a programming language for statistical computing and graphics supported by the R Core Team and the R Foundation for Statistical Computing. Created by statisticians Ross Ihaka and Robert Gentleman, R is used among data miners, bioinformaticians and statisticians for data analysis and developing statistical software. Users have created packages to augment the functions of the R language. According to user surveys and studies of scholarly literature databases, R is one of the most commonly used programming languages in data mining.",
+      appeared: "1993-08-01",
+    },
+    {
+      name: "Racket",
+      description:
+        "Racket is a general-purpose, multi-paradigm programming language and a multi-platform distribution that includes the Racket language, compiler, large standard library, IDE, development tools, and a set of additional languages including Typed Racket (a sister language of Racket with a static type-checker), Swindle, FrTime, Lazy Racket, R5RS & R6RS Scheme, Scribble, Datalog, Racklog, Algol 60 and several teaching languages. The Racket language is a modern dialect of Lisp and a descendant of Scheme.",
+      appeared: "1995-01-01",
+    },
+    {
+      name: "Raku",
+      description:
+        "Raku is a member of the Perl family of programming languages. Formerly known as Perl 6, it was renamed in October 2019. Raku introduces elements of many modern and historical languages. Compatibility with Perl was not a goal, though a compatibility mode is part of the specification. The design process for Raku began in 2000.",
+      appeared: "2015-12-25",
+    },
     { name: "REALbasic", appeared: "1998-01-01" },
-    { name: "Reason", appeared: "2016-05-16" },
+    {
+      name: "Reason",
+      description:
+        "Reason, also known as ReasonML, is a syntax extension and toolchain for OCaml created by Jordan Walke, who also created React, at Facebook. Reason offers a syntax familiar to JavaScript programmers, and compiles to native code using OCaml's compiler toolchain. Reason code may also be compiled to JavaScript using the ReScript compiler. The Reason community officially provides ReasonReact as a solution for React based web applications.",
+      appeared: "2016-05-16",
+    },
     { name: "Rebol", appeared: "1997-01-01" },
-    { name: "Red", appeared: "2011-01-01" },
+    {
+      name: "Red",
+      description:
+        "Red is a programming language designed to overcome the limitations of the programming language Rebol. Red was introduced in 2011 by Nenad Rakočević, and is both an imperative and functional programming language. Its syntax and general usage overlaps that of the interpreted Rebol language. The implementation choices of Red intend to create a full stack programming language: Red can be used for extremely high-level programming (DSLs and GUIs) as well as low-level programming (operating systems and device drivers).",
+      appeared: "2011-01-01",
+    },
     { name: "Rexx", appeared: "1979-01-01" },
     { name: "Ring", appeared: "2016-01-25" },
     { name: "RPG", appeared: "1959-01-01" },
-    { name: "Ruby", appeared: "1995-01-01" },
-    { name: "Rust", appeared: "2010-07-07" },
+    {
+      name: "Ruby",
+      description:
+        'Ruby is an interpreted, high-level, general-purpose programming language which supports multiple programming paradigms. It was designed with an emphasis on programming productivity and simplicity. In Ruby, everything is an object, including primitive data types. It was developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan. Ruby is dynamically typed and uses garbage collection and just-in-time compilation. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming.',
+      appeared: "1995-01-01",
+    },
+    {
+      name: "Rust",
+      description:
+        'Rust is a multi-paradigm, high-level, general-purpose programming language. Rust emphasizes performance, type safety, and concurrency. Rust enforces memory safety—that is, that all references point to valid memory—without requiring the use of a garbage collector or reference counting present in other memory-safe languages. To simultaneously enforce memory safety and prevent concurrent data races, Rust\'s "borrow checker" tracks the object lifetime of all references in a program during compilation.',
+      appeared: "2010-07-07",
+    },
     { name: "S-Lang", appeared: "1992-01-01" },
     { name: "S", appeared: "1976-01-01" },
-    { name: "Scala", appeared: "2004-01-20" },
-    { name: "Scheme", appeared: "1975-01-01" },
+    {
+      name: "Scala",
+      description:
+        "Scala is a strong statically typed high-level general-purpose programming language that supports both object-oriented programming and functional programming. Designed to be concise, many of Scala's design decisions are aimed to address criticisms of Java. Scala source code can be compiled to Java bytecode and run on a Java virtual machine (JVM). Scala can also be compiled to JavaScript to run in a browser, or directly to a native executable.",
+      appeared: "2004-01-20",
+    },
+    {
+      name: "Scheme",
+      description:
+        "Scheme is a dialect of the Lisp family of programming languages. Scheme was created during the 1970s at the MIT AI Lab and released by its developers, Guy L. Steele and Gerald Jay Sussman, via a series of memos now known as the Lambda Papers. It was the first dialect of Lisp to choose lexical scope and the first to require implementations to perform tail-call optimization, giving stronger support for functional programming and associated techniques such as recursive algorithms.",
+      appeared: "1975-01-01",
+    },
     { name: "Seed7", appeared: "2005-01-01" },
     { name: "Simula", appeared: "1962-01-01" },
     { name: "Small Basic", appeared: "2008-10-23" },
     { name: "Smalltalk", appeared: "1972-01-01" },
     { name: "SNOBOL", appeared: "1962-01-01" },
-    { name: "Standard ML", appeared: "1983-01-01" },
-    { name: "Swift", appeared: "2014-06-02" },
-    { name: "Tcl", appeared: "1988-01-01" },
-    { name: "TypeScript", appeared: "2012-10-01" },
-    { name: "Visual Basic .NET", appeared: "2001-01-01" },
+    {
+      name: "Standard ML",
+      description:
+        "Standard ML (SML) is a general-purpose, modular, functional programming language with compile-time type checking and type inference. It is popular among compiler writers and programming language researchers, as well as in the development of theorem provers. Standard ML is a modern dialect of ML, the language used in the Logic for Computable Functions (LCF) theorem-proving project. It is distinctive among widely used languages in that it has a formal specification, given as typing rules and operational semantics in The Definition of Standard ML.",
+      appeared: "1983-01-01",
+    },
+    {
+      name: "Swift",
+      description:
+        "Swift is a high-level general-purpose, multi-paradigm, compiled programming language developed by Apple Inc. and the open-source community. First released in 2014, Swift was developed as a replacement for Apple's earlier programming language Objective-C, as Objective-C had been largely unchanged since the early 1980s and lacked modern language features.",
+      appeared: "2014-06-02",
+    },
+    {
+      name: "Tcl",
+      description:
+        "Tcl is a high-level, general-purpose, interpreted, dynamic programming language. It was designed with the goal of being very simple but powerful. Tcl casts everything into the mold of a command, even programming constructs like variable assignment and procedure definition. Tcl supports multiple programming paradigms, including object-oriented, imperative and functional programming or procedural styles. It is commonly used embedded into C applications, for rapid prototyping, scripted applications, GUIs, and testing.",
+      appeared: "1988-01-01",
+    },
+    {
+      name: "TypeScript",
+      description:
+        "TypeScript is a free and open source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. It is designed for the development of large applications and transpiles to JavaScript. As it is a superset of JavaScript, existing JavaScript programs are also valid TypeScript programs. TypeScript may be used to develop JavaScript applications for both client-side and server-side execution (as with Node.js or Deno). Multiple options are available for transpilation.",
+      appeared: "2012-10-01",
+    },
+    {
+      name: "Visual Basic .NET",
+      description:
+        'Visual Basic (VB), originally called Visual Basic .NET (VB.NET), is a multi-paradigm, object-oriented programming language, implemented on .NET, Mono, and the .NET Framework. Microsoft launched VB.NET in 2002 as the successor to its original Visual Basic language, the last version of which was Visual Basic 6.0. Although the ".NET" portion of the name was dropped in 2005, "Visual Basic .NET" refers to all Visual Basic languages released since 2002, in order to distinguish between them and the classic Visual Basic.',
+      appeared: "2001-01-01",
+    },
     { name: "Visual Basic", appeared: "1991-05-01" },
     { name: "Visual FoxPro", appeared: "1992-01-01" },
     { name: "Visual Prolog" },
-    { name: "WebAssembly", appeared: "2017-03-01" },
+    {
+      name: "WebAssembly",
+      description:
+        "WebAssembly (sometimes abbreviated Wasm) defines a portable binary-code format and a corresponding text format for executable programs as well as software interfaces for facilitating interactions between such programs and their host environment. The main goal of WebAssembly is to enable high-performance applications on web pages, but it does not make any Web-specific assumptions or provide Web-specific features, so it can be employed in other environments as well.",
+      appeared: "2017-03-01",
+    },
     { name: "Wolfram Language", appeared: "1988-01-01" },
-    { name: "x86-64 Assembly", appeared: "1972-01-01" },
+    {
+      name: "x86-64 Assembly",
+      description:
+        "x86 assembly language is the name for the family of assembly languages which provide some level of backward compatibility with CPUs back to the Intel 8008 microprocessor, which was launched in April 1972. It is used to produce object code for the x86 class of processors. Regarded as a programming language, assembly is machine-specific and low-level. Like all assembly languages, x86 assembly uses mnemonics to represent fundamental CPU instructions, or machine code.",
+      appeared: "1972-01-01",
+    },
     { name: "XL" },
     { name: "Xojo", appeared: "2013-06-04" },
     { name: "XPath/XQuery", appeared: "1998-01-01" },
